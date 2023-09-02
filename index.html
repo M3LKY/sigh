@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./projects.css" />
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./skills.css" />
+    <link rel="stylesheet" href="./contact.css" />
+    <script>
+      const loadScriptWhenInView = (scriptElement) => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Load the script when the section is in view
+              const script = scriptElement.querySelector("script");
+              if (script) {
+                const newScript = document.createElement("script");
+                newScript.src = script.src; // Set the script source
+                document.head.appendChild(newScript);
+                observer.unobserve(scriptElement);
+              }
+            }
+          });
+        });
+
+        observer.observe(scriptElement);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const scriptContainers = document.querySelectorAll(".section__content");
+        scriptContainers.forEach((scriptContainer) => {
+          loadScriptWhenInView(scriptContainer);
+        });
+      });
+    </script>
+
+    
+    <title>Melquisedec G</title>
+  </head>
+
+  <body>
+    <section class="section section--primary">
+      <div class="section__content">
+        <script defer>
+          const headerScript = document.createElement("script");
+          headerScript.src = "./header.js";
+          document.head.appendChild(headerScript);
+        </script>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          class="keyhole"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <mask id="myMask" maskContentUnits="objectBoundingBox">
+            <rect fill="white" x="0" y="0" width="100%" height="100%"></rect>
+            <circle
+              cx="0.5"
+              cy="0.5"
+              r="0.5"
+              fill="black"
+              class="mask"
+            ></circle>
+          </mask>
+          <rect
+            fill="white"
+            x="-125%"
+            y="-125%"
+            width="350%"
+            height="350%"
+            class="keyhole__bg"
+            mask="url(#myMask)"
+          ></rect>
+        </svg>
+
+        <span class="arrow" aria-hidden="true">
+          <div class="container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+          </div>
+        </span>
+
+        <script defer>
+          const titleScript = document.createElement("script");
+          titleScript.src = "./title.js";
+          document.head.appendChild(titleScript);
+        </script>
+        <div class="hidden container">
+          <h1 class="hidden">HELLO,</h1>
+          <h1 class="hidden">I'M MELQUISEDEC G</h1>
+          <h1 class="hidden">A SOFTWARE</h1>
+          <h1 class="hidden">ENGINEER</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--secondary">
+      <div class="section__content">
+        <div class=".body">
+          <!--inicio  -->
+
+          <script defer>
+            const skillsScript = document.createElement("script");
+            skillsScript.src = "./skills.js";
+            document.head.appendChild(skillsScript);
+          </script>
+          <article class="wrapper" id="direction-toggle">
+            <div class="marquee">
+              <div class="marquee__group">
+                <span>
+                  <h2>SKILLS</h2>
+                </span>
+                <span>
+                  <img src="./assets/csharp-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/figma-svgrepo-com(4).svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/cpp-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/html-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/css-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img
+                    src="./assets/javascript-svgrepo-com(1).svg"
+                    loading="lazy"
+                  />
+                </span>
+                <span>
+                  <img
+                    src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                    loading="lazy"
+                  />
+                </span>
+                <span>
+                  <img src="./assets/node-js-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/git-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img
+                    src="./assets/postgresql-logo-svgrepo-com.svg"
+                    loading="lazy"
+                  />
+                </span>
+              </div>
+
+              <div aria-hidden="true" class="marquee__group">
+                <span>
+                  <h2>SKILLS</h2>
+                </span>
+                <span>
+                  <img src="./assets/csharp-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/figma-svgrepo-com(4).svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/cpp-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/html-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/css-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img
+                    src="./assets/javascript-svgrepo-com(1).svg"
+                    loading="lazy"
+                  />
+                </span>
+                <span>
+                  <img
+                    src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                    loading="lazy"
+                  />
+                </span>
+                <span>
+                  <img src="./assets/node-js-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/git-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img
+                    src="./assets/postgresql-logo-svgrepo-com.svg"
+                    loading="lazy"
+                  />
+                </span>
+              </div>
+            </div>
+
+            <div class="marquee marquee--reverse">
+              <div class="marquee__group">
+                <span>
+                  <h2>SKILLS</h2>
+                </span>
+                <span>
+                  <img src="./assets/csharp-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/figma-svgrepo-com(4).svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/cpp-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/html-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/css-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img
+                    src="./assets/javascript-svgrepo-com(1).svg"
+                    loading="lazy"
+                  />
+                </span>
+                <span>
+                  <img
+                    src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                    loading="lazy"
+                  />
+                </span>
+                <span>
+                  <img src="./assets/node-js-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/git-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img
+                    src="./assets/postgresql-logo-svgrepo-com.svg"
+                    loading="lazy"
+                  />
+                </span>
+              </div>
+
+              <div aria-hidden="true" class="marquee__group">
+                <span>
+                  <h2>SKILLS</h2>
+                </span>
+                <span>
+                  <img src="./assets/csharp-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/figma-svgrepo-com(4).svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/cpp-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/html-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/css-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img
+                    src="./assets/javascript-svgrepo-com(1).svg"
+                    loading="lazy"
+                  />
+                </span>
+                <span>
+                  <img
+                    src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                    loading="lazy"
+                  />
+                </span>
+                <span>
+                  <img src="./assets/node-js-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img src="./assets/git-svgrepo-com.svg" loading="lazy" />
+                </span>
+                <span>
+                  <img
+                    src="./assets/postgresql-logo-svgrepo-com.svg"
+                    loading="lazy"
+                  />
+                </span>
+              </div>
+            </div>
+          </article>
+          <!-- fin -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tertiary">
+      <div class="section__content">
+        <script defer>
+          const projectScript = document.createElement("script");
+          projectScript.src = "./project.js";
+          document.head.appendChild(projectScript);
+        </script>
+        <div id="gallery" ontouchstart="">
+          <figure>
+            <div>
+              <h2>Projects</h2>
+            </div>
+          </figure>
+
+          <figure>
+            <img src="./assets/tech.png" alt="" loading="lazy" />
+            <figcaption>E-commerce</figcaption>
+          </figure>
+
+          <figure>
+            <img src="./assets/home.png" alt="" loading="lazy" />
+            <figcaption>Real State</figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/pizza.png" alt="" loading="lazy" />
+            <figcaption>Restaurant Website</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://static.toiimg.com/thumb/msid-50494232,imgsize-30364,width-400,resizemode-4/50494232.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <figcaption>Galaxy Movement</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://c4.wallpaperflare.com/wallpaper/773/94/358/tetris-vhs-abstract-minimalism-wallpaper-preview.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <figcaption>Tetris</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.pond5.com/classic-pong-video-game-green-090361674_prevstill.jpeg"
+              alt=""
+              loading="lazy"
+            />
+            <figcaption>Pong Game</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://rembound.com/files/creating-a-snake-game-tutorial-with-html5/snake.png"
+              alt=""
+              loading="lazy"
+            />
+            <figcaption>Snake Game</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--quarteary">
+      <script defer>
+        const contactScript = document.createElement("script");
+        contactScript.src = "./contact.js";
+        document.head.appendChild(contactScript);
+      </script>
+      <div class="bo">
+        <div class="tooltip">
+          <button
+            class="custom-btn btn-5"
+            onclick="copyClipboard()"
+            onmouseout="outFunc()"
+          >
+            <span class="tooltiptext" id="tooltip">Copy mail to clipboard?</span>
+            <span class="cc-text">GET IN TOUCH</span>
+          </button>
+        </div>
+        <label for="freeMail">
+          <input
+            type="text"
+            value="hello@andreaslitis.com"
+            id="freeMail"
+            aria-label="Available for freelance"
+            aria-labelledby="freeMail"
+          />
+        </label>
+      </div>
+    </section>
+
+  </body>
+</html>

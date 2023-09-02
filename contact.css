@@ -1,0 +1,126 @@
+.bo {
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+
+
+.btn-5 {
+	font-family: 'helvetica neue', helvetica, sans-serif;
+	color: #000000;
+	font-size: 1.2em;
+	border: none;
+	margin: 0;
+	padding: 15px;
+	width: auto;
+	overflow: visible;
+	background: white;
+	line-height: normal;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	/* -webkit-appearance: none; */
+  }
+  .btn-5:hover {
+	color: #ffffff;
+	background: transparent;
+	 box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background: #ffffff;
+	
+  }
+  .btn-5:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+	width:100%;
+	transition:800ms ease all;
+  }
+  
+.tooltip {
+	position: absolute;
+	display: inline-block;
+}
+.cc-text {
+	text-transform: uppercase;
+}
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 100%;
+	background-color: #ffffff;
+	color: #000000;
+	text-align: center;
+	padding: 7px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	opacity: 0;
+	transition: opacity 0.3s;
+	
+	font-weight:600;
+	font-size: 12px;
+	/* letter-spacing: 1px; */
+}
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+	animation: enter 0.35s ease infinite alternate;
+}
+@keyframes enter {
+	from {
+		transform: translateY(2px);
+	}
+	to {
+		transform: translateY(-2px);
+	}
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #ffffff transparent transparent transparent;
+}
+.link::after {
+	content: "";
+	height: 1px;
+	width: 0;
+	background-color: #ffffff;
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	/*     https://cubic-bezier.com  gotta love Lea Verou! */
+	transition: width 500ms cubic-bezier(0.27, 0.69, 0.35, 1);
+}
+.link:hover::after {
+	width: 100%;
+}
+#freeMail {
+	position: absolute;
+	right: -100vw;
+}
