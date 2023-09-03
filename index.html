@@ -5,8 +5,7 @@
     <meta name="description" content="Melquisedec's portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./assets/icon.webp" />
-    <!-- <link rel="preload" href="./header.css" as="style" crossorigin="anonymous" /> -->
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#000" />
     <link rel="manifest" href="./manifest.json" />
 
     <title>Melquisedec G</title>
@@ -180,7 +179,14 @@ body {
   }
 }
     </style>
-  </head>
+    <link
+    rel="stylesheet"
+    as="style"
+    href="./header.css"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+</head>
+
 
   <body>
         <section class="section section--primary">
@@ -553,6 +559,16 @@ body {
     <link rel="stylesheet" href="./skills.css" media="all" />
     <link rel="stylesheet" href="./projects.css" media="all" />
     <link rel="stylesheet" href="./contact.css" media="all" />
+    <script async>
+      // Add the { passive: true } option to touch and wheel event listeners
+      document.addEventListener("touchstart", (event) => {
+        event.preventDefault();
+      }, { passive: true });
+
+      document.addEventListener("wheel", (event) => {
+        event.preventDefault();
+      }, { passive: true });
+    </script>
     <script defer>
       const loadScriptWhenInView = (scriptElement) => {
         const observer = new IntersectionObserver((entries) => {
