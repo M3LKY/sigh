@@ -17,5 +17,6 @@
       "type": "image/png"
     }
   ],
-  "splash_pages": "none"
+  "splash_pages": "none",
+  "purpose": "maskable"
 }
