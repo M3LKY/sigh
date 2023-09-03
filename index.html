@@ -5,191 +5,43 @@
     <meta name="description" content="Melquisedec's portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./assets/icon.webp" />
-    <meta name="theme-color" content="#000" />
+    <link rel="preload" href="./header.css" as="style" crossorigin="anonymous" />
+    <meta name="theme-color" content="#000000" />
     <link rel="manifest" href="./manifest.json" />
 
     <title>Melquisedec G</title>
-
-    <style>
-      /* Define colors */
-:root {
-  --primary: #000000;
-  --secondary: #000000;
-  --tertiary: rgba(255, 255, 255);
-  --text: #000000;
-  --contrast: #000000;
-  --accent: #fff;
-  --multiplier: 1.3;
-
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  background-size: cover;
-  overscroll-behavior-x: none;
-  overscroll-behavior-y: none;
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-
-/* Styles for .keyhole */
-.keyhole {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-}
-
-.keyhole__bg {
-  fill: var(--accent);
-}
-
-
-/* Styles for .arrow */
-.arrow {
-  position: absolute;
-  top: 62.5vh;
-  left: 50%;
-  z-index: 2;
-  animation: float 1s ease-in-out infinite alternate both;
-}
-
-.arrow .container {
-  transform: translateX(-50%);
-
-  stroke: var(--text);
-  width: 2.5rem;
-  /* margin-left: 1rem; */
-  height: auto;
-}
-
-/**/
-
-.chevron {
-  position: absolute;
-  width: 38px;
-  height: 8px;
-  opacity: 0;
-  transform: scale3d(0.5, 0.5, 0.5);
-  animation: move 3s ease-out infinite;
-}
-
-.chevron:first-child {
-  animation: move 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-  animation: move 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: #000000;
-}
-
-.chevron:before {
-  left: 0;
-  transform: skew(0deg, 30deg);
-}
-
-.chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skew(0deg, -30deg);
-}
-
-@keyframes move {
-  25% {
-    opacity: 1;
-
-  }
-
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
-}
-
-/**/
-
-/* Styles for .section and its variations */
-.section__content {
-  max-width: 100vw;
-  margin: 0 auto;
-}
-
-.section--primary {
-  display: flex;
-  /* align-items: center;
-  justify-content: center; */
-  background-color: rgb(0, 0, 0);
-  color: white;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-  overflow: hidden;
-
-}
-
-.section--primary .section__content {
-  padding-top: 50rem;
-  padding-bottom: 5rem;
-}
-
-.section--secondary {
-  background: var(--secondary);
-}
-
-.section--tertiary {
-  background: var(--tertiary);
-}
-
-/* Keyframes animation */
-@keyframes float {
-  from {
-    transform: translateY(-50%);
-  }
-
-  to {
-    transform: translateY(50%);
-  }
-}
-    </style>
-    <link
-    rel="stylesheet"
-    as="style"
-    href="./header.css"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-</head>
-
+  </head>
 
   <body>
-        <section class="section section--primary">
+    <script defer>
+      const loadScriptWhenInView = (scriptElement) => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Load the script when the section is in view
+              const script = scriptElement.querySelector("script");
+              if (script) {
+                const newScript = document.createElement("script");
+                newScript.src = script.src; // Set the script source
+                document.head.appendChild(newScript);
+                observer.unobserve(scriptElement);
+              }
+            }
+          });
+        });
+
+        observer.observe(scriptElement);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const scriptContainers = document.querySelectorAll(".section__content");
+        scriptContainers.forEach((scriptContainer) => {
+          loadScriptWhenInView(scriptContainer);
+        });
+      });
+    </script>
+
+    <section class="section section--primary">
       <div class="section__content">
         <script defer>
           const headerScript = document.createElement("script");
@@ -555,46 +407,11 @@ body {
       </div>
     </section>
     <script async src="./lazy.js"></script>
+    <!-- Move these to the end of the <body> section -->
+    <link rel="stylesheet" href="./header.css" media="all" />
     <link rel="stylesheet" href="./style.css" media="all" />
     <link rel="stylesheet" href="./skills.css" media="all" />
     <link rel="stylesheet" href="./projects.css" media="all" />
     <link rel="stylesheet" href="./contact.css" media="all" />
-    <script async>
-      // Add the { passive: true } option to touch and wheel event listeners
-      document.addEventListener("touchstart", (event) => {
-        event.preventDefault();
-      }, { passive: true });
-
-      document.addEventListener("wheel", (event) => {
-        event.preventDefault();
-      }, { passive: true });
-    </script>
-    <script defer>
-      const loadScriptWhenInView = (scriptElement) => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Load the script when the section is in view
-              const script = scriptElement.querySelector("script");
-              if (script) {
-                const newScript = document.createElement("script");
-                newScript.src = script.src; // Set the script source
-                document.head.appendChild(newScript);
-                observer.unobserve(scriptElement);
-              }
-            }
-          });
-        });
-
-        observer.observe(scriptElement);
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const scriptContainers = document.querySelectorAll(".section__content");
-        scriptContainers.forEach((scriptContainer) => {
-          loadScriptWhenInView(scriptContainer);
-        });
-      });
-    </script>
   </body>
 </html>

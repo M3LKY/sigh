@@ -14,9 +14,9 @@
     {
       "src": "./assets/icon.webp", 
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "splash_pages": "none",
-  "purpose": "maskable"
+  "splash_pages": "none"
 }
