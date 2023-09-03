@@ -2,17 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="Melquisedec's portfolio" content="portfolio." />
+    <meta name="description" content="Melquisedec's portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" crossorigin="anonymous" />
-    <meta name="theme-color" content="#000000">
-    <link rel="manifest" href="./manifest.json">
-
-    <link rel="stylesheet" href="./style.css" media="all" />
-    <link rel="stylesheet" href="./projects.css" media="all" />
-    <link rel="stylesheet" href="./header.css" media="all" />
-    <link rel="stylesheet" href="./skills.css" media="all" />
-    <link rel="stylesheet" href="./contact.css" media="all" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.webp" />
+    <link rel="preload" href="./header.css" as="style" crossorigin="anonymous" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="./manifest.json" />
 
     <title>Melquisedec G</title>
   </head>
@@ -88,11 +83,7 @@
           </div>
         </span>
 
-        <script defer>
-          const titleScript = document.createElement("script");
-          titleScript.src = "./title.js";
-          document.head.appendChild(titleScript);
-        </script>
+        <script defer src="./title.js"></script>
         <div class="hidden container">
           <h1 class="hidden">HELLO,</h1>
           <h1 class="hidden">I'M MELQUISEDEC G</h1>
@@ -107,11 +98,7 @@
         <div class=".body">
           <!--inicio  -->
 
-          <script defer>
-            const skillsScript = document.createElement("script");
-            skillsScript.src = "./skills.js";
-            document.head.appendChild(skillsScript);
-          </script>
+          <script defer src="./skills.js"></script>
 
           <article class="wrapper" id="direction-toggle">
             <div class="marquee">
@@ -353,11 +340,7 @@
 
     <section class="section section--tertiary">
       <div class="section__content">
-        <script defer>
-          const projectScript = document.createElement("script");
-          projectScript.src = "./project.js";
-          document.head.appendChild(projectScript);
-        </script>
+        <script defer src="./project.js"></script>
         <div id="gallery" ontouchstart="">
           <figure>
             <div>
@@ -398,11 +381,7 @@
     </section>
 
     <section class="section section--quarteary">
-      <script defer>
-        const contactScript = document.createElement("script");
-        contactScript.src = "./contact.js";
-        document.head.appendChild(contactScript);
-      </script>
+      <script defer src="./contact.js"></script>
       <div class="bo">
         <div class="tooltip">
           <button
@@ -428,5 +407,11 @@
       </div>
     </section>
     <script async src="./lazy.js"></script>
+    <!-- Move these to the end of the <body> section -->
+    <link rel="stylesheet" href="./header.css" media="all" />
+    <link rel="stylesheet" href="./style.css" media="all" />
+    <link rel="stylesheet" href="./skills.css" media="all" />
+    <link rel="stylesheet" href="./projects.css" media="all" />
+    <link rel="stylesheet" href="./contact.css" media="all" />
   </body>
 </html>
