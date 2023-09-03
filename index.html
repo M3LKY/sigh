@@ -2,14 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="Melquisedec's portfolio" content="portfolio." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" crossorigin="anonymous" />
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="./manifest.json">
 
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./projects.css" />
-    <link rel="stylesheet" href="./header.css" />
-    <link rel="stylesheet" href="./skills.css" />
-    <link rel="stylesheet" href="./contact.css" />
-    <script>
+    <link rel="stylesheet" href="./style.css" media="all" />
+    <link rel="stylesheet" href="./projects.css" media="all" />
+    <link rel="stylesheet" href="./header.css" media="all" />
+    <link rel="stylesheet" href="./skills.css" media="all" />
+    <link rel="stylesheet" href="./contact.css" media="all" />
+
+    <title>Melquisedec G</title>
+  </head>
+
+  <body>
+    <script defer>
       const loadScriptWhenInView = (scriptElement) => {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
@@ -37,11 +46,6 @@
       });
     </script>
 
-    
-    <title>Melquisedec G</title>
-  </head>
-
-  <body>
     <section class="section section--primary">
       <div class="section__content">
         <script defer>
@@ -108,6 +112,7 @@
             skillsScript.src = "./skills.js";
             document.head.appendChild(skillsScript);
           </script>
+
           <article class="wrapper" id="direction-toggle">
             <div class="marquee">
               <div class="marquee__group">
@@ -115,42 +120,54 @@
                   <h2>SKILLS</h2>
                 </span>
                 <span>
-                  <img src="./assets/csharp-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/figma-svgrepo-com(4).svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/cpp-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/html-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/css-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
                   <img
-                    src="./assets/javascript-svgrepo-com(1).svg"
-                    loading="lazy"
+                    data-src="./assets/csharp-svgrepo-com.svg"
+                    alt="C# Logo"
                   />
                 </span>
                 <span>
                   <img
-                    src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
-                    loading="lazy"
+                    data-src="./assets/figma-svgrepo-com(4).svg"
+                    alt="Figma Logo"
                   />
                 </span>
                 <span>
-                  <img src="./assets/node-js-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/git-svgrepo-com.svg" loading="lazy" />
+                  <img data-src="./assets/cpp-svgrepo-com.svg" alt="C++ Logo" />
                 </span>
                 <span>
                   <img
-                    src="./assets/postgresql-logo-svgrepo-com.svg"
-                    loading="lazy"
+                    data-src="./assets/html-svgrepo-com.svg"
+                    alt="HTML Logo"
+                  />
+                </span>
+                <span>
+                  <img data-src="./assets/css-svgrepo-com.svg" alt="CSS Logo" />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/javascript-svgrepo-com(1).svg"
+                    alt="JavaScript Logo"
+                  />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                    alt="React Logo"
+                  />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/node-js-svgrepo-com.svg"
+                    alt="Node.js Logo"
+                  />
+                </span>
+                <span>
+                  <img data-src="./assets/git-svgrepo-com.svg" alt="Git Logo" />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/postgresql-logo-svgrepo-com.svg"
+                    alt="PostgreSQL Logo"
                   />
                 </span>
               </div>
@@ -160,42 +177,54 @@
                   <h2>SKILLS</h2>
                 </span>
                 <span>
-                  <img src="./assets/csharp-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/figma-svgrepo-com(4).svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/cpp-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/html-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/css-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
                   <img
-                    src="./assets/javascript-svgrepo-com(1).svg"
-                    loading="lazy"
+                    data-src="./assets/csharp-svgrepo-com.svg"
+                    alt="C# Logo"
                   />
                 </span>
                 <span>
                   <img
-                    src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
-                    loading="lazy"
+                    data-src="./assets/figma-svgrepo-com(4).svg"
+                    alt="Figma Logo"
                   />
                 </span>
                 <span>
-                  <img src="./assets/node-js-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/git-svgrepo-com.svg" loading="lazy" />
+                  <img data-src="./assets/cpp-svgrepo-com.svg" alt="C++ Logo" />
                 </span>
                 <span>
                   <img
-                    src="./assets/postgresql-logo-svgrepo-com.svg"
-                    loading="lazy"
+                    data-src="./assets/html-svgrepo-com.svg"
+                    alt="HTML Logo"
+                  />
+                </span>
+                <span>
+                  <img data-src="./assets/css-svgrepo-com.svg" alt="CSS Logo" />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/javascript-svgrepo-com(1).svg"
+                    alt="JavaScript Logo"
+                  />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                    alt="React Logo"
+                  />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/node-js-svgrepo-com.svg"
+                    alt="Node.js Logo"
+                  />
+                </span>
+                <span>
+                  <img data-src="./assets/git-svgrepo-com.svg" alt="Git Logo" />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/postgresql-logo-svgrepo-com.svg"
+                    alt="PostgreSQL Logo"
                   />
                 </span>
               </div>
@@ -207,42 +236,54 @@
                   <h2>SKILLS</h2>
                 </span>
                 <span>
-                  <img src="./assets/csharp-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/figma-svgrepo-com(4).svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/cpp-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/html-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/css-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
                   <img
-                    src="./assets/javascript-svgrepo-com(1).svg"
-                    loading="lazy"
+                    data-src="./assets/csharp-svgrepo-com.svg"
+                    alt="C# Logo"
                   />
                 </span>
                 <span>
                   <img
-                    src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
-                    loading="lazy"
+                    data-src="./assets/figma-svgrepo-com(4).svg"
+                    alt="Figma Logo"
                   />
                 </span>
                 <span>
-                  <img src="./assets/node-js-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/git-svgrepo-com.svg" loading="lazy" />
+                  <img data-src="./assets/cpp-svgrepo-com.svg" alt="C++ Logo" />
                 </span>
                 <span>
                   <img
-                    src="./assets/postgresql-logo-svgrepo-com.svg"
-                    loading="lazy"
+                    data-src="./assets/html-svgrepo-com.svg"
+                    alt="HTML Logo"
+                  />
+                </span>
+                <span>
+                  <img data-src="./assets/css-svgrepo-com.svg" alt="CSS Logo" />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/javascript-svgrepo-com(1).svg"
+                    alt="JavaScript Logo"
+                  />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                    alt="React Logo"
+                  />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/node-js-svgrepo-com.svg"
+                    alt="Node.js Logo"
+                  />
+                </span>
+                <span>
+                  <img data-src="./assets/git-svgrepo-com.svg" alt="Git Logo" />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/postgresql-logo-svgrepo-com.svg"
+                    alt="PostgreSQL Logo"
                   />
                 </span>
               </div>
@@ -252,42 +293,54 @@
                   <h2>SKILLS</h2>
                 </span>
                 <span>
-                  <img src="./assets/csharp-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/figma-svgrepo-com(4).svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/cpp-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/html-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/css-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
                   <img
-                    src="./assets/javascript-svgrepo-com(1).svg"
-                    loading="lazy"
+                    data-src="./assets/csharp-svgrepo-com.svg"
+                    alt="C# Logo"
                   />
                 </span>
                 <span>
                   <img
-                    src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
-                    loading="lazy"
+                    data-src="./assets/figma-svgrepo-com(4).svg"
+                    alt="Figma Logo"
                   />
                 </span>
                 <span>
-                  <img src="./assets/node-js-svgrepo-com.svg" loading="lazy" />
-                </span>
-                <span>
-                  <img src="./assets/git-svgrepo-com.svg" loading="lazy" />
+                  <img data-src="./assets/cpp-svgrepo-com.svg" alt="C++ Logo" />
                 </span>
                 <span>
                   <img
-                    src="./assets/postgresql-logo-svgrepo-com.svg"
-                    loading="lazy"
+                    data-src="./assets/html-svgrepo-com.svg"
+                    alt="HTML Logo"
+                  />
+                </span>
+                <span>
+                  <img data-src="./assets/css-svgrepo-com.svg" alt="CSS Logo" />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/javascript-svgrepo-com(1).svg"
+                    alt="JavaScript Logo"
+                  />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                    alt="React Logo"
+                  />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/node-js-svgrepo-com.svg"
+                    alt="Node.js Logo"
+                  />
+                </span>
+                <span>
+                  <img data-src="./assets/git-svgrepo-com.svg" alt="Git Logo" />
+                </span>
+                <span>
+                  <img
+                    data-src="./assets/postgresql-logo-svgrepo-com.svg"
+                    alt="PostgreSQL Logo"
                   />
                 </span>
               </div>
@@ -313,48 +366,31 @@
           </figure>
 
           <figure>
-            <img src="./assets/tech.png" alt="" loading="lazy" />
+            <img data-src="./assets/techs.webp" alt="E-commerce" />
             <figcaption>E-commerce</figcaption>
           </figure>
-
           <figure>
-            <img src="./assets/home.png" alt="" loading="lazy" />
+            <img data-src="./assets/home.webp" alt="Real State" />
             <figcaption>Real State</figcaption>
           </figure>
           <figure>
-            <img src="./assets/pizza.png" alt="" loading="lazy" />
+            <img data-src="./assets/piz.webp" alt="Restaurant Website" />
             <figcaption>Restaurant Website</figcaption>
           </figure>
           <figure>
-            <img
-              src="https://static.toiimg.com/thumb/msid-50494232,imgsize-30364,width-400,resizemode-4/50494232.jpg"
-              alt=""
-              loading="lazy"
-            />
+            <img data-src="./assets/gala.webp" alt="Galaxy Movement" />
             <figcaption>Galaxy Movement</figcaption>
           </figure>
           <figure>
-            <img
-              src="https://c4.wallpaperflare.com/wallpaper/773/94/358/tetris-vhs-abstract-minimalism-wallpaper-preview.jpg"
-              alt=""
-              loading="lazy"
-            />
+            <img data-src="./assets/tetris.webp" alt="Tetris" />
             <figcaption>Tetris</figcaption>
           </figure>
           <figure>
-            <img
-              src="https://images.pond5.com/classic-pong-video-game-green-090361674_prevstill.jpeg"
-              alt=""
-              loading="lazy"
-            />
+            <img data-src="./assets/pong.webp" alt="Pong Game" />
             <figcaption>Pong Game</figcaption>
           </figure>
           <figure>
-            <img
-              src="https://rembound.com/files/creating-a-snake-game-tutorial-with-html5/snake.png"
-              alt=""
-              loading="lazy"
-            />
+            <img data-src="./assets/snake.webp" alt="Snake Game" />
             <figcaption>Snake Game</figcaption>
           </figure>
         </div>
@@ -374,7 +410,9 @@
             onclick="copyClipboard()"
             onmouseout="outFunc()"
           >
-            <span class="tooltiptext" id="tooltip">Copy mail to clipboard?</span>
+            <span class="tooltiptext" id="tooltip"
+              >Copy mail to clipboard?</span
+            >
             <span class="cc-text">GET IN TOUCH</span>
           </button>
         </div>
@@ -389,6 +427,6 @@
         </label>
       </div>
     </section>
-
+    <script async src="./lazy.js"></script>
   </body>
 </html>

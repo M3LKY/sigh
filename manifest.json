@@ -1,0 +1,24 @@
+{
+    "name": "Melquisedec's portfolio",
+    "short_name": "Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "/path-to-icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "splash_pages": [
+        {
+          "src": "/path-to-splash-screen.png",
+          "sizes": "750x1334",
+          "type": "image/png"
+        }
+      ]
+      
+  }
+  

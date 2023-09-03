@@ -4,6 +4,7 @@
   opacity: 0;
   filter: blur(0);
   transform: translateX(50%);
+  -webkit-transition: all 1s; 
   transition: all 1s;
 }
 
